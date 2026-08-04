@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Offizielle Website von Aurora Tales – Americana, Folk & Akustische Musik.">
-    <title>Aurora Tales | Americana & Acoustic Folk</title>
+    <meta name="description" content="Offizielle Website von Austernperle – Americana, Folk & Akustische Musik.">
+    <title>Austernperle | Americana & Acoustic Folk</title>
     <style>
         /* CSS Reset & Farbpalette aus dem Artwork (WCAG AA konform) */
         :root {
@@ -39,31 +39,23 @@
             outline-offset: 3px;
         }
 
-        /* Banner-Platzhalter */
+        /* Banner-Grafik */
         .header-banner {
             width: 100%;
-            height: 250px;
+            max-height: 350px;
             background-color: #132627;
-            background-image: linear-gradient(135deg, #0d1e1f 0%, #183032 100%);
             border-bottom: 2px solid var(--accent-color);
+            overflow: hidden;
             display: flex;
             align-items: center;
             justify-content: center;
-            overflow: hidden;
-            position: relative;
         }
 
         .header-banner img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-        }
-
-        .banner-placeholder-text {
-            color: #5c787a;
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
+            display: block;
         }
 
         /* Layout Container */
@@ -142,9 +134,6 @@
             background-color: #0d1e1f;
             border: 2px solid var(--accent-color);
             border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
             margin: 0 auto;
             overflow: hidden;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
@@ -154,6 +143,7 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
+            display: block;
         }
 
         h2 {
@@ -217,42 +207,32 @@
 </head>
 <body>
 
-    <!-- BANNER PLATZHALTER -->
-    <div class="header-banner" role="img" aria-label="Banner-Grafik von Aurora Tales">
-        <!-- HIER DEIN BANNER-BILD EINBINDEN:
-             Ersetze den nachfolgenden Span-Tag durch ein img-Tag wie z.B.:
-             <img src="dein-banner.jpg" alt="Aurora Tales Header Banner"> 
-        -->
-        <span class="banner-placeholder-text"><!-- HIER BANNER-BILD EINSETZEN (z.B. banner.jpg) --></span>
+    <!-- BANNER BILD -->
+    <div class="header-banner">
+        <img src="Banner_Art.PNG" alt="Banner-Grafik von Austernperle">
     </div>
 
     <!-- HERO SECTION -->
     <header role="banner">
-        <h1>Aurora Tales</h1>
+        <h1>Austernperle</h1>
         <p class="tagline">Geschichten, in Holz und Saiten geschnitzt.</p>
         <a href="#listen" class="cta-button" aria-label="Springe direkt zu den Musik-Streams">Jetzt reinhören</a>
     </header>
 
     <main role="main">
-        <!-- BIO SECTION MIT COVER / PROFILBILD PLATZHALTER -->
+        <!-- BIO SECTION MIT COVER-BILD -->
         <section id="about" aria-labelledby="about-heading">
             <h2 id="about-heading">Über die Musik</h2>
             <div class="bio-grid">
                 
-                <!-- COVER ART / PROFILBILD PLATZHALTER -->
+                <!-- COVER ART -->
                 <div class="cover-art-container">
-                    <!-- HIER DEIN COVER-BILD EINBINDEN:
-                         Ersetze den Span-Tag durch z.B.:
-                         <img src="cover-art.jpg" alt="Album Cover 'That's Me' von Austernperle / Aurora Tales"> 
-                    -->
-                    <span class="banner-placeholder-text" style="text-align: center; padding: 1rem;">
-                        <!-- HIER ALBUM-COVER EINSETZEN (z.B. cover.jpg) -->
-                    </span>
+                    <img src="Cover_Art.PNG" alt="Album Cover 'That's Me' von Austernperle">
                 </div>
 
                 <div>
                     <p>
-                        <strong>Aurora Tales</strong> verbindet die zeitlose Tradition des Americana mit der intimen Wärme klassischer Acoustic-Folk-Arrangements. Getragen von einer feinfühligen, prägnanten Akustikgitarre und einer tiefen, warmen Gesangsstimme erzählen die Songs von weiten Wegen, stillen Momenten und echten Emotionen. Ohne künstliche Schnörkel, dafür mit purer Leidenschaft und Liebe zum organischen Klang.
+                        <strong>Austernperle</strong> verbindet die zeitlose Tradition des Americana mit der intimen Wärme klassischer Acoustic-Folk-Arrangements. Getragen von einer feinfühligen, prägnanten Akustikgitarre und einer tiefen, warmen Gesangsstimme erzählen die Songs von weiten Wegen, stillen Momenten und echten Emotionen. Ohne künstliche Schnörkel, dafür mit purer Leidenschaft und Liebe zum organischen Klang.
                     </p>
                 </div>
             </div>
@@ -261,28 +241,27 @@
         <!-- STREAMING & LINKS SECTION -->
         <section id="listen" aria-labelledby="listen-heading">
             <h2 id="listen-heading">Musik & Streaming</h2>
-            <p>Die Veröffentlichungen stehen kurz bevor. Sobald die Tracks live sind, findest du Aurora Tales auf folgenden Plattformen:</p>
+            <p>Die Veröffentlichungen stehen kurz bevor. Sobald die Tracks live sind, findest du Austernperle auf folgenden Plattformen:</p>
             
             <div class="stream-grid">
                 <!-- PLATZHALTER: Füge bei href="..." deine echten Links ein, sobald diese existieren -->
-                <a href="#" class="stream-link" target="_blank" rel="noopener noreferrer" aria-label="Aurora Tales auf Spotify anhören (Demnächst)">Spotify <!-- LINK HIER --></a>
-                <a href="#" class="stream-link" target="_blank" rel="noopener noreferrer" aria-label="Aurora Tales auf Apple Music anhören (Demnächst)">Apple Music <!-- LINK HIER --></a>
-                <a href="#" class="stream-link" target="_blank" rel="noopener noreferrer" aria-label="Aurora Tales auf SoundCloud anhören (Demnächst)">SoundCloud <!-- LINK HIER --></a>
-                <a href="#" class="stream-link" target="_blank" rel="noopener noreferrer" aria-label="Aurora Tales auf YouTube anhören (Demnächst)">YouTube <!-- LINK HIER --></a>
-                <a href="#" class="stream-link" target="_blank" rel="noopener noreferrer" aria-label="Aurora Tales auf Bandcamp anhören (Demnächst)">Bandcamp <!-- LINK HIER --></a>
-                <a href="#" class="stream-link" target="_blank" rel="noopener noreferrer" aria-label="Aurora Tales auf Instagram besuchen (Demnächst)">Instagram <!-- LINK HIER --></a>
+                <a href="#" class="stream-link" target="_blank" rel="noopener noreferrer" aria-label="Austernperle auf Spotify anhören (Demnächst)">Spotify</a>
+                <a href="#" class="stream-link" target="_blank" rel="noopener noreferrer" aria-label="Austernperle auf Apple Music anhören (Demnächst)">Apple Music</a>
+                <a href="#" class="stream-link" target="_blank" rel="noopener noreferrer" aria-label="Austernperle auf SoundCloud anhören (Demnächst)">SoundCloud</a>
+                <a href="#" class="stream-link" target="_blank" rel="noopener noreferrer" aria-label="Austernperle auf YouTube anhören (Demnächst)">YouTube</a>
+                <a href="#" class="stream-link" target="_blank" rel="noopener noreferrer" aria-label="Austernperle auf Bandcamp anhören (Demnächst)">Bandcamp</a>
+                <a href="#" class="stream-link" target="_blank" rel="noopener noreferrer" aria-label="Austernperle auf Instagram besuchen (Demnächst)">Instagram</a>
             </div>
         </section>
     </main>
 
     <!-- FOOTER / RECHTLICHES -->
     <footer role="contentinfo">
-        <p>&copy; 2026 Aurora Tales. Alle Rechte vorbehalten.</p>
+        <p>&copy; 2026 Austernperle. Alle Rechte vorbehalten.</p>
         <nav aria-label="Rechtliche Links">
-            <!-- PLATZHALTER FÜR RECHTLICHE SEITEN -->
             <a href="#">Impressum</a> | 
             <a href="#">Datenschutz</a> | 
-            <a href="mailto:kontakt@auroratales.de">Kontakt</a>
+            <a href="mailto:kontakt@austernperle.de">Kontakt</a>
         </nav>
     </footer>
 
