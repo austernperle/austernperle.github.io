@@ -5,17 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Offizielle Website von Austernperle – Americana, Folk & Akustische Musik.">
     <title>Austernperle | Americana & Acoustic Folk</title>
+
+    <!-- Google Fonts Einbindung: Cinzel (Akzente/Überschriften) & Montserrat (Fließtext) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+
     <style>
-        /* CSS Reset & Farbpalette aus dem Artwork (WCAG AA konform) */
+        /* Farbpalette aus dem Artwork (WCAG AA konform) & Typografie */
         :root {
             --bg-color: #0d1e1f;         /* Tiefes Petrol/Teal */
             --card-bg: #183032;          /* Kontrast-Sektionen */
-            --text-color: #f4f0ea;        /* Helles Perlmutt/Creme für höchste Lesbarkeit */
-            --accent-color: #d4af37;      /* Erstklassiges Gold */
+            --text-color: #f4f0ea;        /* Helles Perlmutt/Creme */
+            --accent-color: #d4af37;      /* Edles Gold */
             --accent-hover: #e5b842;      /* Hellgold bei Hover */
-            --focus-ring: #ffffff;
             --border-color: #26474a;
-            --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            --focus-ring: #ffffff;
+            --font-heading: 'Cinzel', Georgia, serif;
+            --font-body: 'Montserrat', -apple-system, sans-serif;
         }
 
         * {
@@ -27,13 +34,27 @@
         body {
             background-color: var(--bg-color);
             color: var(--text-color);
-            font-family: var(--font-family);
-            line-height: 1.6;
+            font-family: var(--font-body);
+            line-height: 1.7;
             padding: 0;
             margin: 0;
+            font-size: 1rem;
         }
 
-        /* Barrierefreiheit: Tastatur-Fokus */
+        /* Barrierefreie Screenreader-Klasse: Visuell verborgen, für Screenreader voll lesbar */
+        .visually-hidden {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+
+        /* Tastatur-Fokus für Barrierefreiheit */
         a:focus, button:focus {
             outline: 3px solid var(--focus-ring);
             outline-offset: 3px;
@@ -42,7 +63,7 @@
         /* Banner-Grafik */
         .header-banner {
             width: 100%;
-            max-height: 350px;
+            max-height: 380px;
             background-color: #132627;
             border-bottom: 2px solid var(--accent-color);
             overflow: hidden;
@@ -71,19 +92,13 @@
             padding-bottom: 2.5rem;
         }
 
-        h1 {
-            font-size: 3rem;
-            letter-spacing: 2px;
-            color: var(--accent-color);
-            margin-bottom: 0.5rem;
-            text-transform: uppercase;
-        }
-
         .tagline {
-            font-size: 1.25rem;
-            font-weight: 300;
+            font-family: var(--font-heading);
+            font-size: 1.35rem;
+            font-weight: 500;
             color: var(--text-color);
             margin-bottom: 2rem;
+            letter-spacing: 1px;
         }
 
         /* Call-To-Action Button */
@@ -91,11 +106,15 @@
             display: inline-block;
             background-color: var(--accent-color);
             color: #0d1e1f;
-            padding: 0.9rem 2rem;
-            font-weight: bold;
+            font-family: var(--font-body);
+            font-size: 1rem;
+            padding: 0.9rem 2.2rem;
+            font-weight: 700;
             text-decoration: none;
             border-radius: 4px;
+            letter-spacing: 0.5px;
             transition: background-color 0.2s ease, transform 0.1s ease;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.2);
         }
 
         .cta-button:hover {
@@ -111,6 +130,16 @@
             margin-bottom: 2rem;
             border: 1px solid var(--border-color);
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        h2 {
+            font-family: var(--font-heading);
+            font-size: 1.8rem;
+            color: var(--accent-color);
+            margin-bottom: 1.2rem;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 0.5rem;
+            letter-spacing: 1px;
         }
 
         /* Bio mit Cover/Profilbild Grid */
@@ -144,14 +173,6 @@
             height: 100%;
             object-fit: cover;
             display: block;
-        }
-
-        h2 {
-            font-size: 1.8rem;
-            color: var(--accent-color);
-            margin-bottom: 1.2rem;
-            border-bottom: 1px solid var(--border-color);
-            padding-bottom: 0.5rem;
         }
 
         /* Streaming Grid */
@@ -209,12 +230,14 @@
 
     <!-- BANNER BILD -->
     <div class="header-banner">
-        <img src="Banner_Art.PNG" alt="Banner-Grafik von Austernperle">
+        <img src="Banner_Art.PNG" alt="Banner von Austernperle – Songs, die bleiben. Handgemacht. Echt. Aus dem Herzen.">
     </div>
 
     <!-- HERO SECTION -->
     <header role="banner">
-        <h1>Austernperle</h1>
+        <!-- Unsichtbare H1 für Suchmaschinen & Screenreader (verhindert Dopplung auf dem Bildschirm) -->
+        <h1 class="visually-hidden">Austernperle</h1>
+        
         <p class="tagline">Geschichten, in Holz und Saiten geschnitzt.</p>
         <a href="#listen" class="cta-button" aria-label="Springe direkt zu den Musik-Streams">Jetzt reinhören</a>
     </header>
