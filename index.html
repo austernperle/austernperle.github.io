@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Offizielle Website von Aurora Tales – Americana, Folk & Akustische Musik.">
+    <title>Aurora Tales | Americana & Acoustic Folk</title>
+    <style>
+        /* CSS Reset & Farbpalette aus dem Artwork (WCAG AA konform) */
+        :root {
+            --bg-color: #0d1e1f;         /* Tiefes Petrol/Teal */
+            --card-bg: #183032;          /* Kontrast-Sektionen */
+            --text-color: #f4f0ea;        /* Helles Perlmutt/Creme für höchste Lesbarkeit */
+            --accent-color: #d4af37;      /* Erstklassiges Gold */
+            --accent-hover: #e5b842;      /* Hellgold bei Hover */
+            --focus-ring: #ffffff;
+            --border-color: #26474a;
+            --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: var(--font-family);
+            line-height: 1.6;
+            padding: 0;
+            margin: 0;
+        }
+
+        /* Barrierefreiheit: Tastatur-Fokus */
+        a:focus, button:focus {
+            outline: 3px solid var(--focus-ring);
+            outline-offset: 3px;
+        }
+
+        /* Banner-Platzhalter */
+        .header-banner {
+            width: 100%;
+            height: 250px;
+            background-color: #132627;
+            background-image: linear-gradient(135deg, #0d1e1f 0%, #183032 100%);
+            border-bottom: 2px solid var(--accent-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .header-banner img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .banner-placeholder-text {
+            color: #5c787a;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        /* Layout Container */
+        header, main, footer {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem;
+        }
+
+        header {
+            text-align: center;
+            padding-top: 2rem;
+            padding-bottom: 2.5rem;
+        }
+
+        h1 {
+            font-size: 3rem;
+            letter-spacing: 2px;
+            color: var(--accent-color);
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+        }
+
+        .tagline {
+            font-size: 1.25rem;
+            font-weight: 300;
+            color: var(--text-color);
+            margin-bottom: 2rem;
+        }
+
+        /* Call-To-Action Button */
+        .cta-button {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: #0d1e1f;
+            padding: 0.9rem 2rem;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.2s ease, transform 0.1s ease;
+        }
+
+        .cta-button:hover {
+            background-color: var(--accent-hover);
+            transform: translateY(-2px);
+        }
+
+        /* Sektionen & Karten */
+        section {
+            background-color: var(--card-bg);
+            padding: 2.5rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Bio mit Cover/Profilbild Grid */
+        .bio-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        @media (min-width: 600px) {
+            .bio-grid {
+                grid-template-columns: 220px 1fr;
+            }
+        }
+
+        .cover-art-container {
+            width: 100%;
+            max-width: 220px;
+            aspect-ratio: 1 / 1;
+            background-color: #0d1e1f;
+            border: 2px solid var(--accent-color);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+        }
+
+        .cover-art-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            color: var(--accent-color);
+            margin-bottom: 1.2rem;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 0.5rem;
+        }
+
+        /* Streaming Grid */
+        .stream-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 1.2rem;
+            margin-top: 1.5rem;
+        }
+
+        .stream-link {
+            display: block;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            text-align: center;
+            padding: 1rem;
+            text-decoration: none;
+            border-radius: 4px;
+            border: 1px solid var(--accent-color);
+            font-weight: 600;
+            transition: all 0.2s ease;
+        }
+
+        .stream-link:hover {
+            background-color: var(--accent-color);
+            color: #0d1e1f;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            font-size: 0.9rem;
+            color: #a0b2b3;
+            border-top: 1px solid var(--border-color);
+            margin-top: 3rem;
+            padding-bottom: 3rem;
+        }
+
+        footer nav {
+            margin-top: 0.8rem;
+        }
+
+        footer nav a {
+            color: var(--accent-color);
+            text-decoration: none;
+            margin: 0 0.5rem;
+        }
+
+        footer nav a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- BANNER PLATZHALTER -->
+    <div class="header-banner" role="img" aria-label="Banner-Grafik von Aurora Tales">
+        <!-- HIER DEIN BANNER-BILD EINBINDEN:
+             Ersetze den nachfolgenden Span-Tag durch ein img-Tag wie z.B.:
+             <img src="dein-banner.jpg" alt="Aurora Tales Header Banner"> 
+        -->
+        <span class="banner-placeholder-text"><!-- HIER BANNER-BILD EINSETZEN (z.B. banner.jpg) --></span>
+    </div>
+
+    <!-- HERO SECTION -->
+    <header role="banner">
+        <h1>Aurora Tales</h1>
+        <p class="tagline">Geschichten, in Holz und Saiten geschnitzt.</p>
+        <a href="#listen" class="cta-button" aria-label="Springe direkt zu den Musik-Streams">Jetzt reinhören</a>
+    </header>
+
+    <main role="main">
+        <!-- BIO SECTION MIT COVER / PROFILBILD PLATZHALTER -->
+        <section id="about" aria-labelledby="about-heading">
+            <h2 id="about-heading">Über die Musik</h2>
+            <div class="bio-grid">
+                
+                <!-- COVER ART / PROFILBILD PLATZHALTER -->
+                <div class="cover-art-container">
+                    <!-- HIER DEIN COVER-BILD EINBINDEN:
+                         Ersetze den Span-Tag durch z.B.:
+                         <img src="cover-art.jpg" alt="Album Cover 'That's Me' von Austernperle / Aurora Tales"> 
+                    -->
+                    <span class="banner-placeholder-text" style="text-align: center; padding: 1rem;">
+                        <!-- HIER ALBUM-COVER EINSETZEN (z.B. cover.jpg) -->
+                    </span>
+                </div>
+
+                <div>
+                    <p>
+                        <strong>Aurora Tales</strong> verbindet die zeitlose Tradition des Americana mit der intimen Wärme klassischer Acoustic-Folk-Arrangements. Getragen von einer feinfühligen, prägnanten Akustikgitarre und einer tiefen, warmen Gesangsstimme erzählen die Songs von weiten Wegen, stillen Momenten und echten Emotionen. Ohne künstliche Schnörkel, dafür mit purer Leidenschaft und Liebe zum organischen Klang.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- STREAMING & LINKS SECTION -->
+        <section id="listen" aria-labelledby="listen-heading">
+            <h2 id="listen-heading">Musik & Streaming</h2>
+            <p>Die Veröffentlichungen stehen kurz bevor. Sobald die Tracks live sind, findest du Aurora Tales auf folgenden Plattformen:</p>
+            
+            <div class="stream-grid">
+                <!-- PLATZHALTER: Füge bei href="..." deine echten Links ein, sobald diese existieren -->
+                <a href="#" class="stream-link" target="_blank" rel="noopener noreferrer" aria-label="Aurora Tales auf Spotify anhören (Demnächst)">Spotify <!-- LINK HIER --></a>
+                <a href="#" class="stream-link" target="_blank" rel="noopener noreferrer" aria-label="Aurora Tales auf Apple Music anhören (Demnächst)">Apple Music <!-- LINK HIER --></a>
+                <a href="#" class="stream-link" target="_blank" rel="noopener noreferrer" aria-label="Aurora Tales auf SoundCloud anhören (Demnächst)">SoundCloud <!-- LINK HIER --></a>
+                <a href="#" class="stream-link" target="_blank" rel="noopener noreferrer" aria-label="Aurora Tales auf YouTube anhören (Demnächst)">YouTube <!-- LINK HIER --></a>
+                <a href="#" class="stream-link" target="_blank" rel="noopener noreferrer" aria-label="Aurora Tales auf Bandcamp anhören (Demnächst)">Bandcamp <!-- LINK HIER --></a>
+                <a href="#" class="stream-link" target="_blank" rel="noopener noreferrer" aria-label="Aurora Tales auf Instagram besuchen (Demnächst)">Instagram <!-- LINK HIER --></a>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER / RECHTLICHES -->
+    <footer role="contentinfo">
+        <p>&copy; 2026 Aurora Tales. Alle Rechte vorbehalten.</p>
+        <nav aria-label="Rechtliche Links">
+            <!-- PLATZHALTER FÜR RECHTLICHE SEITEN -->
+            <a href="#">Impressum</a> | 
+            <a href="#">Datenschutz</a> | 
+            <a href="mailto:kontakt@auroratales.de">Kontakt</a>
+        </nav>
+    </footer>
+
+</body>
+</html>
