@@ -6,10 +6,17 @@
     <meta name="description" content="Offizielle Website von Austernperle – Americana, Folk & Akustische Musik.">
     <title>Austernperle | Americana & Acoustic Folk</title>
 
-    <!-- Google Fonts Einbindung: Cinzel (Akzente/Überschriften) & Montserrat (Fließtext) -->
+    <!-- Banner sofort mit höchster Priorität vorladen (beschleunigt LCP massiv) -->
+    <link rel="preload" as="image" href="Banner_Art.webp" fetchpriority="high">
+
+    <!-- Google Fonts nicht-blockierend laden (verhindert Render-Blocking auf Mobilgeräten) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Montserrat:wght@400;600;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Montserrat:wght@400;600;700&display=swap" media="print" onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Montserrat:wght@400;600;700&display=swap">
+    </noscript>
 
     <style>
         /* Farbpalette aus dem Artwork (WCAG AA konform) & Typografie */
@@ -74,7 +81,8 @@
 
         .header-banner img {
             width: 100%;
-            height: 100%;
+            height: auto;
+            max-height: 380px;
             object-fit: cover;
             display: block;
         }
@@ -230,7 +238,7 @@
 
     <!-- BANNER BILD -->
     <div class="header-banner">
-        <img src="Banner_Art.webp" alt="Banner von Austernperle – Songs, die bleiben. Handgemacht. Echt. Aus dem Herzen.">
+        <img src="Banner_Art.webp" width="1440" height="519" fetchpriority="high" decoding="async" alt="Banner von Austernperle – Songs, die bleiben. Handgemacht. Echt. Aus dem Herzen.">
     </div>
 
     <!-- HERO SECTION -->
@@ -250,7 +258,7 @@
                 
                 <!-- COVER ART -->
                 <div class="cover-art-container">
-                    <img src="Cover_Art.webp" alt="Album Cover 'That's Me' von Austernperle">
+                    <img src="Cover_Art.webp" width="440" height="440" loading="lazy" decoding="async" alt="Album Cover 'That's Me' von Austernperle">
                 </div>
 
                 <div>
